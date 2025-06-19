@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -27,7 +28,8 @@
       font-size: 18px;
       color: #333;
       margin: 5px 0;
-    }.stitch {
+    }
+    .stitch {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -56,7 +58,6 @@
     .botao:hover {
       background-color: #16a085;
     }
-
     .baloon {
       position: fixed;
       bottom: -100px;
@@ -91,7 +92,8 @@
       }
     }
   </style>
-</head><body>
+</head>
+<body>
 
 <audio autoplay loop>
   <source src="https://www.televisiontunes.com/uploads/audio/Xuxa%20-%20Parabens.mp3" type="audio/mpeg" />
@@ -107,7 +109,9 @@
   <button class="botao" onclick="confirmarPresenca()">Confirmar Presença</button>
 </div>
 
-<img class="stitch" src="https://media.tenor.com/GGmGJObzB84AAAAi/stitch-dancing.gif" alt="Stitch dançando"><script>
+<img class="stitch" src="https://media.tenor.com/GGmGJObzB84AAAAi/stitch-dancing.gif" alt="Stitch dançando">
+
+<script>
   function confirmarPresenca() {
     window.open("https://wa.me/5531985964011?text=Olá!%20Quero%20confirmar%20presença%20na%20festa%20da%20Sophia!", "_blank");
   }
