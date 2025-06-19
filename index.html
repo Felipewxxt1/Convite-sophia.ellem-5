@@ -27,3 +27,31 @@
       animation: dance 1s infinite alternate;
       z-index: 10;
     }
+@keyframes dance {
+      0% { transform: translateX(-50%) rotate(-10deg); }
+      100% { transform: translateX(-50%) rotate(10deg); }
+    }
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      animation: float 10s infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-120vh); opacity: 0; }
+    }
+    .button {
+      margin-top: 30px;
+      padding: 15px 25px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.2em;
+      text-decoration: none;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Vamos comemorar os 5 aninhos da Sophia Ellen!</h1>
