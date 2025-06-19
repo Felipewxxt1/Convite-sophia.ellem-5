@@ -107,4 +107,35 @@
   <button class="botao" onclick="confirmarPresenca()">Confirmar Presença</button>
 </div>
 
-<img class="stitch" src="https://media.tenor.com/GGmGJObzB84AAAAi/stitch-dancing.gif" alt="Stitch dançando">
+<img class="stitch" src="https://media.tenor.com/GGmGJObzB84AAAAi/stitch-dancing.gif" alt="Stitch dançando"><script>
+  function confirmarPresenca() {
+    window.open("https://wa.me/5531985964011?text=Olá!%20Quero%20confirmar%20presença%20na%20festa%20da%20Sophia!", "_blank");
+  }
+
+  document.querySelector("audio").volume = 0.4;
+
+  const cores = ['#ff5c5c', '#f9d71c', '#6ac1ff', '#ff85b3', '#9bff91'];
+  const baloes = [];
+
+  function criarBalao() {
+    const balao = document.createElement('div');
+    balao.classList.add('baloon');
+    balao.style.background = `radial-gradient(circle at 20px 20px, ${cores[Math.floor(Math.random() * cores.length)]}, #c80000)`;
+    balao.style.left = Math.random() * 100 + 'vw';
+    balao.style.width = 30 + Math.random() * 20 + 'px';
+    balao.style.height = 40 + Math.random() * 30 + 'px';
+    balao.style.animationDuration = (5 + Math.random() * 5) + 's';
+    document.body.appendChild(balao);
+    baloes.push(balao);
+
+    setTimeout(() => {
+      balao.remove();
+      baloes.splice(baloes.indexOf(balao), 1);
+    }, 10000);
+  }
+
+  setInterval(criarBalao, 500);
+</script>
+
+</body>
+</html>
