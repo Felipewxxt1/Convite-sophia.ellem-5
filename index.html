@@ -64,3 +64,17 @@
   <audio autoplay loop>
     <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_6b36b6d98e.mp3?filename=happy-birthday-12267.mp3" type="audio/mpeg">
   </audio>
+<script>
+    function createBalloon() {
+      const balloon = document.createElement("img");
+      balloon.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Balloons-aj.svg/1024px-Balloons-aj.svg.png";
+      balloon.className = "balloon";
+      balloon.style.left = Math.random() * 100 + "vw";
+      balloon.style.width = Math.random() * 30 + 20 + "px";
+      document.getElementById("balloons").appendChild(balloon);
+      setTimeout(() => balloon.remove(), 12000);
+    }
+    setInterval(createBalloon, 500);
+  </script>
+</body>
+</html>
